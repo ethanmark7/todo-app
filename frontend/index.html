@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo Application</h1>
+            <p class="subtitle">Manage your tasks efficiently</p>
+        </header>
+
+        <!-- Statistics Section -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="total-count">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completed-count">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="pending-count">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <!-- Add Todo Form -->
+        <div class="add-todo-section">
+            <form id="add-todo-form">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="What needs to be done?" 
+                    maxlength="200"
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn btn-primary">
+                    <span>Add Todo</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Todos List -->
+        <div class="todos-section">
+            <div id="todos-list" class="todos-list">
+                <!-- Todos will be dynamically inserted here -->
+            </div>
+            <div id="empty-state" class="empty-state">
+                <p>🎉 No todos yet. Add one to get started!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
